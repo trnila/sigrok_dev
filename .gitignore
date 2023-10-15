@@ -1,0 +1,5 @@
+install/
+libsigrok/
+libsigrokdecode/
+pulseview/
+sigrok-cli/
