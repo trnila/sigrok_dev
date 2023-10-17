@@ -6,6 +6,6 @@ cat <<EOF  | sudo tee /usr/local/bin/pulseview > /dev/null
 #!/bin/bash
 cd "$SCRIPT_DIR"
 source .envrc
-./install/bin/pulseview
+./install/bin/pulseview > /tmp/pulseview.log 2>&1
 EOF
 sudo chmod a+x /usr/local/bin/pulseview
