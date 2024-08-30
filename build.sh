@@ -9,10 +9,6 @@ build() (
   echo $1
   echo ==============================
   
-  if [ ! -d "$1" ]; then
-    git clone "git://sigrok.org/$1"
-  fi
-
   cd "$1"
 
   if [ "$1" = "pulseview" ]; then
@@ -22,7 +18,7 @@ build() (
     ./autogen.sh
     ./configure --prefix=$PREFIX PKG_CONFIG_PATH=$PKG_CONFIG_PATH --enable-java=0 --enable-ruby=0
   fi
-  make install
+  make -j$(nproc) install
 )
 
 build libsigrok
