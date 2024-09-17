@@ -3,3 +3,4 @@ libsigrok/
 libsigrokdecode/
 pulseview/
 sigrok-cli/
+sigrok-firmware
