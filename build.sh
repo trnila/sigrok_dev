@@ -8,6 +8,10 @@ build() (
   echo ==============================
   echo $1
   echo ==============================
+
+  if [ ! -d "$1" ]; then
+	git clone git://sigrok.org/"$1"
+  fi
   
   cd "$1"
 
