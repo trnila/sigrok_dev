@@ -26,4 +26,5 @@ build() (
 build libsigrok
 build libsigrokdecode
 build sigrok-cli
+build sigrok-firmware
 build pulseview
